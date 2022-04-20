@@ -4,6 +4,12 @@ const recognition = new window.SpeechRecognition();
 recognition.lang = 'en-US';
 recognition.interimResults = true;
 
+document.getElementById("listenButton").onclick = function() {startListening()};
+var textCopy = document.getElementById('copyText');
+console.log(textCopy)
+
+var selectedText;
+
 if(recognition)
     console.log("browser supports the speech recognition")
 else{
@@ -12,7 +18,9 @@ else{
 
 document.addEventListener('selectionchange', () => {
     var selObj = window.getSelection();
-    var selectedText = selObj.toString();
+    if(selObj.toString() !== '')
+        selectedText = selObj.toString();
+    console.log(selectedText)
 });
 
 recognition.addEventListener('result', (message) => {
@@ -22,13 +30,29 @@ recognition.addEventListener('result', (message) => {
         .join('')
 
     if(text === 'copy')
-        console.log("COPY")
+        copyText();
 
     console.log(text)
 })
 
 recognition.addEventListener('end', () =>{
-    recognition.start();
+    //recognition.start();
 })
 
-recognition.start();
+function copyText(){
+    const elem = document.createElement('textarea');
+    elem.value = selectedText;
+    document.body.appendChild(elem);
+    elem.select();
+    document.execCommand('copy');
+    document.body.removeChild(elem);
+
+    textCopy.classList.add("hidden");
+    recognition.stop();
+}
+
+function startListening(){
+    recognition.start();
+
+    textCopy.classList.remove("hidden");
+}
