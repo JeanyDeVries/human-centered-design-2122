@@ -9,6 +9,7 @@ var textCopy = document.getElementById('copyText');
 console.log(textCopy)
 
 var selectedText;
+var saidCopy = false;
 
 if(recognition)
     console.log("browser supports the speech recognition")
@@ -31,12 +32,15 @@ recognition.addEventListener('result', (message) => {
 
     if(text === 'copy')
         copyText();
+    else
+        saidCopy = false;
 
     console.log(text)
 })
 
 recognition.addEventListener('end', () =>{
-    //recognition.start();
+    if(!saidCopy)
+        recognition.start();
 })
 
 function copyText(){
@@ -48,6 +52,7 @@ function copyText(){
     document.body.removeChild(elem);
 
     textCopy.classList.add("hidden");
+    saidCopy = true;
     recognition.stop();
 }
 
