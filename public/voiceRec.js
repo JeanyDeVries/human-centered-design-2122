@@ -1,16 +1,26 @@
 window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 
-const recogniztion = new window.SpeechRecognition();
-recogniztion.interimResults = true;
+const recognition = new window.SpeechRecognition();
+recognition.lang = 'en-US';
+recognition.interimResults = true;
 
-if(recogniztion)
-    console.log("browser supports the speech recogniztion")
+if(recognition)
+    console.log("browser supports the speech recognition")
 else{
-    console.log("browser does not support the speech recogniztion")
+    console.log("browser does not support the speech recognition")
 }
 
-recogniztion.addEventListener('result', (message) => {
-    console.log(message)
+recognition.addEventListener('result', (message) => {
+    const text = Array.from(message.results)
+        .map(result => result[0])
+        .map(result => result.transcript)
+        .join('')
+
+    console.log(text)
 })
 
-recogniztion.start();
+recognition.addEventListener('end', () =>{
+    recognition.start();
+})
+
+recognition.start();
