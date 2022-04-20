@@ -16,6 +16,9 @@ recognition.addEventListener('result', (message) => {
         .map(result => result.transcript)
         .join('')
 
+    if(text === 'copy')
+        console.log("COPY")
+
     console.log(text)
 })
 
