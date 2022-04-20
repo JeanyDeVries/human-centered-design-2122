@@ -57,8 +57,31 @@ span {
     width: 150px;
     height: 150px;
     display: block;
-    background-color: cornflowerblue;
+    background-color: rgb(145, 168, 215);
     border-radius: 20px;
     margin-bottom: 30px;
     position: relative;
+    transition: all 0.15s ease-in;
+}
+
+.listenButton:hover {
+    opacity: 0.9;
+    transform: scale(1.07);
+}
+
+.listenButton:active {
+    transform: scale(1.15);
+}
+
+.copyText {
+    font-size: 1.3em;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    margin-bottom: -25px;
+    text-align: center;
+}
+
+.hidden{
+    visibility: hidden;
 }
