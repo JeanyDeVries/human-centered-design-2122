@@ -10,19 +10,27 @@ var saidCopy;
 var copyBtnClicked = false;
 var pasteBtnClicked = false;
 var doNotListen = false;
+var copied = false;
 
 document.getElementById("listenCopyButton").onclick = function() {
     startListening();
     copyBtnClicked = true;
     pasteBtnClicked = false;
     textCopy.classList.remove("hidden");
+    textPaste.classList.add("hidden");
 };
 var textCopy = document.getElementById('copyText');
 
 document.getElementById("listenPasteButton").onclick = function() {
-    startListening(pasteBtnClicked)
-    pasteBtnClicked = true;
-    copyBtnClicked = false;
+    if(!copied){
+        textPaste.textContent = "Kopieer eerst via de knop hier links!"
+    }
+    else{
+        textPaste.textContent = "Selecteer een tekstvlak en zeg PLAKKEN!"
+        startListening(pasteBtnClicked)
+        pasteBtnClicked = true;
+        copyBtnClicked = false;
+    }
     textPaste.classList.remove("hidden");
 };
 var textPaste = document.getElementById('pasteText');
@@ -74,6 +82,7 @@ function copyText(){
 
     textCopy.classList.add("hidden");
     saidCopy = true;
+    copied = true;
     recognition.stop();
 }
 
