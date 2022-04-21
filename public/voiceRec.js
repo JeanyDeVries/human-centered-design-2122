@@ -9,6 +9,7 @@ var selectedText;
 var saidCopy;
 var copyBtnClicked = false;
 var pasteBtnClicked = false;
+var doNotListen = false;
 
 document.getElementById("listenCopyButton").onclick = function() {
     startListening();
@@ -44,31 +45,33 @@ recognition.addEventListener('result', (message) => {
         .map(result => result.transcript)
         .join('')
 
-    console.log(copyBtnClicked)
     if(text === 'copy' && copyBtnClicked)
         copyText();
     else if(text === 'smash' && pasteBtnClicked){
         pasteText();
     }
     
-    if(text !== 'copy' && text !== 'smash')
+    if(!doNotListen && text !== 'copy' && text !== 'smash')
         saidCopy = false;
 
-    console.log(text)
+    //console.log(text)
 })
 
 recognition.addEventListener('end', () =>{
+    recognition.stop();
     if(!saidCopy)
         recognition.start();
 })
 
 function copyText(){
-    const elem = document.createElement('textarea');
-    elem.value = selectedText;
-    document.body.appendChild(elem);
-    elem.select();
-    document.execCommand('copy');
-    document.body.removeChild(elem);
+    doNotListen = true;
+    //console.log(selectedText)
+    navigator.clipboard
+          .writeText(selectedText)
+          .then(
+              success => console.log("text copied"), 
+              err => console.log("error copying text")
+          );
 
     textCopy.classList.add("hidden");
     saidCopy = true;
@@ -76,11 +79,12 @@ function copyText(){
 }
 
 function pasteText(){
+    doNotListen = true;
     navigator.clipboard
         .readText()
         .then(
             cliptext =>
-                (document.activeElement.innerText = cliptext),
+                (document.activeElement.innerText += cliptext),
                 err => console.log(err)
     );
 
@@ -91,4 +95,5 @@ function pasteText(){
 
 function startListening(){
     recognition.start();
+    doNotListen = false;
 }
