@@ -1,7 +1,7 @@
 window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 
 const recognition = new window.SpeechRecognition();
-recognition.lang = 'en-US';
+recognition.lang = 'nl';
 recognition.interimResults = true;
 
 var selectedText;
@@ -45,16 +45,16 @@ recognition.addEventListener('result', (message) => {
         .map(result => result.transcript)
         .join('')
 
-    if(text === 'copy' && copyBtnClicked)
+    if(text === 'kopiëren' && copyBtnClicked)
         copyText();
-    else if(text === 'smash' && pasteBtnClicked){
+    else if(text === 'plakken' && pasteBtnClicked){
         pasteText();
     }
     
-    if(!doNotListen && text !== 'copy' && text !== 'smash')
+    if(!doNotListen && text !== 'kopiëren' && text !== 'plakken')
         saidCopy = false;
 
-    //console.log(text)
+    console.log(text)
 })
 
 recognition.addEventListener('end', () =>{
@@ -65,7 +65,6 @@ recognition.addEventListener('end', () =>{
 
 function copyText(){
     doNotListen = true;
-    //console.log(selectedText)
     navigator.clipboard
           .writeText(selectedText)
           .then(
@@ -82,10 +81,11 @@ function pasteText(){
     doNotListen = true;
     navigator.clipboard
         .readText()
-        .then(
-            cliptext =>
-                (document.activeElement.innerText += cliptext),
-                err => console.log(err)
+        .then(cliptext => {
+                console.log(cliptext, document.activeElement.innerText);
+                document.activeElement.textContent += cliptext
+            },
+            err => console.log(err)
     );
 
     textPaste.classList.add("hidden");
