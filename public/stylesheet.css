@@ -19,7 +19,7 @@ header {
 }
 
 p {
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 300;
     text-align: center;
     margin-bottom: 10px;
@@ -40,7 +40,8 @@ span {
     margin-bottom: 10px;
 }
 
-.listenCopyButton::before,  .listenPasteButton::before{
+.listenCopyButton::before,
+.listenPasteButton::before {
     content: '';
     background-size: cover;
     width: 100%;
@@ -52,35 +53,42 @@ span {
     background-size: 75px;
 }
 
-.listenCopyButton::before{
+.listenCopyButton::before {
     background-image: url('/img/copy.png');
 }
 
-.listenPasteButton::before{
+.listenPasteButton::before {
     background-image: url('/img/paste.png');
 }
 
-.listenCopyButton, .listenPasteButton{
+.listenCopyButton,
+.listenPasteButton {
     width: 150px;
     height: 150px;
     display: block;
     background-color: rgb(145, 168, 215);
     border-radius: 20px;
+    margin: 0;
     margin-bottom: 30px;
     position: relative;
     transition: all 0.15s ease-in;
+    box-shadow: inset 0 0 10px 1px #989898, 0 0 17px 1px #ababab;
 }
 
-.listenCopyButton:hover, .listenPasteButton:hover {
+.listenCopyButton:hover,
+.listenPasteButton:hover {
     opacity: 0.9;
     transform: scale(1.07);
+    cursor: pointer;
 }
 
-.listenCopyButton:active, .listenPasteButton:active {
+.listenCopyButton:active,
+.listenPasteButton:active {
     transform: scale(1.15);
 }
 
-.copyText, .pasteText {
+.copyText,
+.pasteText {
     font-size: 1.3em;
     position: absolute;
     width: 100%;
@@ -96,12 +104,13 @@ span {
 .speechButtons {
     display: flex;
     align-content: center;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
+    gap: 20px;
 }
 
-textarea{
+textarea {
     width: 100%;
     height: 100px;
 }
