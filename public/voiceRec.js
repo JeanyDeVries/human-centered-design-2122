@@ -4,12 +4,27 @@ const recognition = new window.SpeechRecognition();
 recognition.lang = 'en-US';
 recognition.interimResults = true;
 
-document.getElementById("listenButton").onclick = function() {startListening()};
-var textCopy = document.getElementById('copyText');
-console.log(textCopy)
-
 var selectedText;
-var saidCopy = false;
+
+var saidCopy;
+var copyBtnClicked = false;
+var pasteBtnClicked = false;
+
+document.getElementById("listenCopyButton").onclick = function() {
+    startListening();
+    copyBtnClicked = true;
+    pasteBtnClicked = false;
+    textCopy.classList.remove("hidden");
+};
+var textCopy = document.getElementById('copyText');
+
+document.getElementById("listenPasteButton").onclick = function() {
+    startListening(pasteBtnClicked)
+    pasteBtnClicked = true;
+    copyBtnClicked = false;
+    textPaste.classList.remove("hidden");
+};
+var textPaste = document.getElementById('pasteText');
 
 if(recognition)
     console.log("browser supports the speech recognition")
@@ -21,7 +36,6 @@ document.addEventListener('selectionchange', () => {
     var selObj = window.getSelection();
     if(selObj.toString() !== '')
         selectedText = selObj.toString();
-    console.log(selectedText)
 });
 
 recognition.addEventListener('result', (message) => {
@@ -30,9 +44,14 @@ recognition.addEventListener('result', (message) => {
         .map(result => result.transcript)
         .join('')
 
-    if(text === 'copy')
+    console.log(copyBtnClicked)
+    if(text === 'copy' && copyBtnClicked)
         copyText();
-    else
+    else if(text === 'smash' && pasteBtnClicked){
+        pasteText();
+    }
+    
+    if(text !== 'copy' && text !== 'smash')
         saidCopy = false;
 
     console.log(text)
@@ -56,8 +75,20 @@ function copyText(){
     recognition.stop();
 }
 
+function pasteText(){
+    navigator.clipboard
+        .readText()
+        .then(
+            cliptext =>
+                (document.activeElement.innerText = cliptext),
+                err => console.log(err)
+    );
+
+    textPaste.classList.add("hidden");
+    saidCopy = true;
+    recognition.stop();
+}
+
 function startListening(){
     recognition.start();
-
-    textCopy.classList.remove("hidden");
 }

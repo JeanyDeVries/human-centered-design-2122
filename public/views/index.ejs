@@ -10,13 +10,19 @@
 </head>
 <body>
     <header>
-        <h1>PASTY</h1>
+        <h1>SMASHY</h1>
         <span>Copy paste using voice recognition</span>
     </header>
 
-    <btn type="button" id="listenButton" class="listenButton">
-        <p class = "copyText hidden" id="copyText">Select text first and say COPY!</p>
-    </btn>
+    <div class = "speechButtons">
+        <btn type="button" id="listenCopyButton" class="listenCopyButton">
+            <p class = "copyText hidden" id="copyText">Select text first and say COPY!</p>
+        </btn>
+    
+        <btn type="button" id="listenPasteButton" class="listenPasteButton">
+            <p class = "pasteText hidden" id="pasteText">Select an area to paste and say SMASH!</p>
+        </btn>
+    </div>
     
     <section>
         <p>
@@ -61,6 +67,10 @@
             Hic nostrum expedita aperiam accusamus, nesciunt quae consequuntur est, 
             dolorum excepturi itaque delectus labore quo earum repellat! Eius beatae culpa harum repudiandae.
         </p>
+
+        <textarea id="clipboard-paste">
+
+        </textarea>
     </section>
 
 </body>
