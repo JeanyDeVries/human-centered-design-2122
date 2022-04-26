@@ -11,17 +11,14 @@
 <body>
     <header>
         <h1>PLAKKY</h1>
-        <span>Kopier en plak met spraakopname</span>
+        <span class = "subTitle">Kopier en plak met spraakopname</span>
     </header>
-    <h2>druk op de knoppen om te kopiëren en plakken</h2>
-    <div class = "speechButtons">
-        <btn type="button" id="listenCopyButton" class="listenCopyButton">
-            <p class = "copyText hidden" id="copyText">Selecteer tekst en zeg KOPIËREN!</p>
-        </btn>
-        <btn type="button" id="listenPasteButton" class="listenPasteButton">
-            <p class = "pasteText hidden" id="pasteText">Selecteer een tekstvlak en zeg PLAKKEN!</p>
-        </btn>
-    </div>
+    <div>
+        <input class = "checkboxMic" id="microphone" type="checkbox" checked />
+        <label for="microphone" class="microphone-check">
+          <span class="microphone-icon"></span>
+        </label>
+      </div>
     <section>
         <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
@@ -44,7 +41,6 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
         </p>
 
-        <textarea></textarea>
         <textarea></textarea>
     </section>
 
