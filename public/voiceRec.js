@@ -7,11 +7,7 @@ recognition.interimResults = true;
 const recordingbutton = document.getElementById('microphone');
 
 var selectedText;
-var saidCopy;
-var copyBtnClicked = false;
-var pasteBtnClicked = false;
 var doNotListen = false;
-var copied = false;
 
 checkifSupported();
 
@@ -46,9 +42,9 @@ recognition.addEventListener('result', (message) => {
         .map(result => result.transcript)
         .join('')
 
-    if(text === 'kopiëren' && copyBtnClicked)
+    if(text === 'kopiëren')
         copyText();
-    else if(text === 'plakken' && pasteBtnClicked){
+    else if(text === 'plakken'){
         pasteText();
     }
 
