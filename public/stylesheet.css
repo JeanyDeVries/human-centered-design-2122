@@ -130,6 +130,13 @@ textarea {
 
 @import url("https://use.fontawesome.com/releases/v5.10.0/css/all.css");
 
+.toggleBarMic {
+    width: 100%;
+    position: relative;
+    display: grid;
+    margin-bottom: 20px;
+}
+
 .checkboxMic {
     left: -9999999999px;
     position: absolute;

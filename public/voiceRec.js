@@ -4,42 +4,35 @@ const recognition = new window.SpeechRecognition();
 recognition.lang = 'nl';
 recognition.interimResults = true;
 
-var selectedText;
+const recordingbutton = document.getElementById('microphone');
 
+var selectedText;
 var saidCopy;
 var copyBtnClicked = false;
 var pasteBtnClicked = false;
 var doNotListen = false;
 var copied = false;
 
-document.getElementById("listenCopyButton").onclick = function() {
-    startListening();
-    copyBtnClicked = true;
-    pasteBtnClicked = false;
-    textCopy.classList.remove("hidden");
-    textPaste.classList.add("hidden");
-};
-var textCopy = document.getElementById('copyText');
+checkifSupported();
 
-document.getElementById("listenPasteButton").onclick = function() {
-    if(!copied){
-        textPaste.textContent = "Kopieer eerst via de knop hier links!"
-    }
+function checkifSupported(){
+    if(recognition)
+        startListening();
     else{
-        textPaste.textContent = "Selecteer een tekstvlak en zeg PLAKKEN!"
-        startListening(pasteBtnClicked)
-        pasteBtnClicked = true;
-        copyBtnClicked = false;
+        return;
     }
-    textPaste.classList.remove("hidden");
-};
-var textPaste = document.getElementById('pasteText');
-
-if(recognition)
-    console.log("browser supports the speech recognition")
-else{
-    console.log("browser does not support the speech recognition")
 }
+
+recordingbutton.addEventListener('change', function() {
+    if (this.checked) {
+        doNotListen = true;
+        stopListening();
+    } 
+    else {
+        doNotListen = false;
+        startListening();
+    }
+  });
 
 document.addEventListener('selectionchange', () => {
     var selObj = window.getSelection();
@@ -58,36 +51,25 @@ recognition.addEventListener('result', (message) => {
     else if(text === 'plakken' && pasteBtnClicked){
         pasteText();
     }
-    
-    if(!doNotListen && text !== 'kopiëren' && text !== 'plakken')
-        saidCopy = false;
 
     console.log(text)
 })
 
 recognition.addEventListener('end', () =>{
-    recognition.stop();
-    if(!saidCopy)
+    if(!doNotListen)
         recognition.start();
 })
 
 function copyText(){
-    doNotListen = true;
     navigator.clipboard
           .writeText(selectedText)
           .then(
               success => console.log("text copied"), 
               err => console.log("error copying text")
           );
-
-    textCopy.classList.add("hidden");
-    saidCopy = true;
-    copied = true;
-    recognition.stop();
 }
 
 function pasteText(){
-    doNotListen = true;
     navigator.clipboard
         .readText()
         .then(cliptext => {
@@ -96,13 +78,12 @@ function pasteText(){
             },
             err => console.log(err)
     );
-
-    textPaste.classList.add("hidden");
-    saidCopy = true;
-    recognition.stop();
 }
 
 function startListening(){
     recognition.start();
-    doNotListen = false;
+}
+
+function stopListening(){
+    recognition.stop();
 }
