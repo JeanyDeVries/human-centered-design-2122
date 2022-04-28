@@ -20,3 +20,23 @@ Checken of als je het van het ene bestand kopieert het dan wel hetzelfde is, che
 Selecteren met voice!! + als je het hebt nog iets veranderen
 
 Liefst 2-talig (Engels, Nederland)
+
+
+### NOTES (session 2):
+kan links en rechts indrukken op de muis, ookal heeft die geen vingers. Gaat vrij soepel. 
+Vriendin waar de casus voor is kan maar 1 knop drukken. Ze is sepastisch en kan met weinig precisie klikken. Dus elke keer heen en weer met de muis is onhandig. Kost veel tijd en frustraties. Liefst zo min mogelijk knoppen gebruik. Veel gebeurt via spraak. 
+Scrollen is best moeilijk. Misschien via spraakopname naar het woord gaan. Vermijd scrollen. Soort zoekfunctie. 
+Dungeons and dragons vind die leuk
+Volgende en vorige invoegen..?
+
+feedback testing:
+maak aan van microfoon duidelijk plus instructies duidelijker via een knop of iets dergelijks.
+Laat zien dat de microfoon aanstat en dat er geluisterd wordt (misschien ook microfoon uitstaan uit).
+Werkte niet op mac...?
+Geef feedback met wat je kopieert en wat er fout gaat!
+Als je kopieert/selecteert dat je kan zien wat je hebt. 
+Denk door de background weinig focus op dingen, toch maar weer terug naar simpel?
+
+
+
+
