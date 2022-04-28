@@ -6,8 +6,9 @@ recognition.interimResults = true;
 
 const recordingbutton = document.getElementById('microphone');
 
-var selectedText;
 var doNotListen = false;
+
+var selectedText = "";
 var lastMessage = "";
 
 checkifSupported();
@@ -52,6 +53,8 @@ recognition.addEventListener('result', (message) => {
         selectText(text, "kopieer")
     }
 
+    //event is final
+
     console.log(text)
     lastMessage = text;
 })
@@ -80,8 +83,12 @@ function selectText(result, string){
     string = result.substring(result.indexOf(string) + string.length + 1)
     $("section").focus()
     if(window.find(string)){
+        console.log("found")
         navigator.clipboard
             .writeText(string)
+    }
+    else{
+        console.log("not found")
     }
 }
 
