@@ -8,6 +8,7 @@ const recordingbutton = document.getElementById('microphone');
 
 var selectedText;
 var doNotListen = false;
+var lastMessage = "";
 
 checkifSupported();
 
@@ -44,16 +45,15 @@ recognition.addEventListener('result', (message) => {
 
     if(text === 'kopiëren')
         copyText();
-    else if(text === 'plakken'){
+    else if(text === 'plakken' && lastMessage !== 'plakken'){
         pasteText();
+    }
+    else if(text.includes("kopieer")){
+        selectText(text, "kopieer")
     }
 
     console.log(text)
-})
-
-recognition.addEventListener('end', () =>{
-    if(!doNotListen)
-        recognition.start();
+    lastMessage = text;
 })
 
 function copyText(){
@@ -76,10 +76,28 @@ function pasteText(){
     );
 }
 
+function selectText(result, string){
+    string = result.substring(result.indexOf(string) + string.length + 1)
+    $("section").focus()
+    if(window.find(string)){
+        navigator.clipboard
+            .writeText(string)
+    }
+}
+
 function startListening(){
     recognition.start();
 }
 
 function stopListening(){
     recognition.stop();
+}
+
+recognition.addEventListener('end', () =>{
+    if(!doNotListen)
+        recognition.start();
+})
+
+function $(element) {
+    return document.querySelector(element)
 }
