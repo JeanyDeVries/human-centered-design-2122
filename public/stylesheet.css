@@ -1,40 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300&family=Quintessential&family=Roboto+Serif:wght@500&display=swap');
 @import url("https://use.fontawesome.com/releases/v5.10.0/css/all.css");
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
 * {
     margin: 0 auto;
-    font-family: 'League Spartan', sans-serif;
+    font-family: 'Cinzel', serif;
     color: #ffffff;
 }
 
 body {
     background-image: url("/img/dndBackground.jpg");
-    background-position: bottom;background-repeat: no-repeat;background-size: cover;margin-left: 150px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 150px;
     margin-right: 150px;
 }
 
 header {
-    width: 30%;
+    width: fit-content;
     border-bottom: 3px solid #8996c1;
     margin-bottom: 20px;
     /* color: black; */
 }
 
 p {
-    font-size: 1.3em;
-    font-weight: 600;
+    font-size: 1.2em;
+    font-weight: 300;
     text-align: center;
     margin-bottom: 10px;
-text-shadow: 1px 1px 0px #000000;
-    line-height: 1.5rem;}
+    text-shadow: 1px 1px 1px #000000;
+    line-height: 1.8rem;
+    word-spacing: 0.2rem;
+}
 
 h1 {
     font-size: 5em;
     font-weight: 900;
     text-align: center;
     margin-top: 20px;
-    color: #ff6464;
+    color: #545b6f;
+    text-shadow: 1px 1px 1px #000000;
 }
 
 h2 {
@@ -45,12 +51,13 @@ h2 {
 }
 
 .subTitle {
-    font-size: 1.3em;
-    font-weight: 600;
+    font-size: 1.4em;
+    font-weight: 800;
     text-align: center;
     display: block;
     margin-bottom: 10px;
-    color: #ff6464;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #000000;
 }
 
 .listenCopyButton::before,
