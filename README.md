@@ -2,6 +2,10 @@
 - [Description](#description)
 - [Concept](#concept)
 - [User scenario](#User)
+- [User testing](#Testing)
+  - [Week 1](#1)
+  - [Week 2](#2)
+  - [Week 3](#3)
 - [Issues](#Issues)
 
 ## Description
@@ -16,25 +20,25 @@ My concept is making a site where he can select, copy and paste using speech. Hi
 
 ## User scenario <a name="User">
 ### Who?
-Eric is 49 jaar, woont in Amsterdam en heeft HKU (Interaction Design) gestudeerd. Sinds kleins af aan zijn zijn ledematen vergroeid en is hij dus fysiek beperkt. Daarom zit hij vanaf een jonge leeftijd al in een elektrische rolstoel.
+Eric is 49 years old, lives in Amsterdam-zuid and studies Interaction Design at HKU. Since childhood, his limbs have grown together and he is therefore physically limited. That's why he sat in a wheelchair at a young age. 
 
-Eric is een zeer gezellige en leuke man, met een goed gevoel voor humor. Hij houdt zich momenteel bezig met toegankelijkheid voor openbare omgevingen tijdens zijn werk, en is hier ook erg druk mee. Ook houdt hij van muziek, lezen en gamen.
+Eric is a great guy, with a good sense of humor. He is currently working on accessibility for public environments. He loves music, reading, playing games and riding through nature. 
 
-Hij gebruikt voor de computer een game muis met een hoge DPI. Hierdoor kan Eric met kleine bewegingen al snel de cursor over het hele scherm bewegen. Hij heeft meerdere toetsenborden die hij gebruikt, en bedient zijn mobiel met een stylus. Toetsen die, op een toetsenbord, wat verder uit elkaar staan zijn voor Eric lastig te bedienen met een toetsencombinatie, en dit is dus een duidelijk pijnpunt voor hem.
+Eric suprisingly uses his mouse very well. Having to use multiple keys on the keyboard is a struggle that's why he always uses right click to copy and paste text. Only the friend off Eric cannot select text with her mouse very well, so that's why he also wants us to look at that as well. 
 
 ### What?
-Eric wilt graag gemakkelijk tekst kunnen selecteren, kopiëren en plakken, en dit zonder toetsencombinaties. Toetsencombinaties zijn voor Eric moeilijk door zijn fysieke beperking, en CTRL + V vind hij dan ook erg irritant om te gebruiken, omdat hij dan beide handen moet gebruiken en dus zijn muis niet constant vast kan hebben. Hij wilt deze functionaliteiten graag uitgewerkt zien door middel van spraak.
+Eric wants us to avoid using key combinations because that is not possible for him. He wants us to find a new solution for it using speech. The commands he wants in there are the simple copy and paste, but also to select text. Selecting text can be hard, because you need precise mouse movement for it, and for some people that can be almost impossible. 
 
 ### How?
-Voor mijn concept wil ik een Google Chrome extensie bedenken waarmee Eric door middel van spraak commando's toetsencombinaties kan uitvoeren zoals kopiëren (CTRL + C) en plakken (CTRL + V).
+I want the user to be able to copy and paste using the web speech api (https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API).
+As I said in my concept chapter, I want the user to have multiple commands. One of them is selecting text, the others copy and paste. 
 
 ### Why?
-Dit maakt het gebruik van de computer veel makkelijker voor Eric, zodat hij niet constant zijn hand van zijn muis hoeft te halen om toetsencombinaties uit te voeren op het toetsenbord.
+With this concept it would be easier for Eric, but also for a lot of other people, to select/copy/paste without having to use key combinations and precize movement with the mouse. 
 
+## User testing <a name="Testing">
   
-## User testing
-  
-### Week 1
+### Week 1 <a name="1">
 
 https://user-images.githubusercontent.com/44086608/166654549-1cf3cb62-de08-47cf-b1bd-03b6edd8cc44.mp4
   
@@ -53,8 +57,8 @@ Feedback about product:
   - A chrome extension is very handy. 
   - A way to change text when copying would be a great feature as well. 
 
-### Week 2
-  
+### Week 2 <a name="2">
+   
 https://user-images.githubusercontent.com/44086608/166654577-69ba5651-bc74-47ab-9673-918c5a8d153c.mp4
 
 Feedback about Eric:
@@ -78,7 +82,7 @@ Als je kopieert/selecteert dat je kan zien wat je hebt.
 Denk door de background weinig focus op dingen, toch maar weer terug naar simpel?
 
 
-### Week 3
+### Week 3 <a name="3">
   
   
   
