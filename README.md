@@ -13,10 +13,10 @@ For this course we have to make a site for one specific person, in my case Eric.
 
 ## Concept
 My concept is making a site where he can select, copy and paste using speech. His talking is being listened to, so that he can use it for commands. I want multiple options for him:
-- He can select one word from the text using speech
-- He can select a whole area saying copy start word....to....ending words using speech
-- He can copy the selected text using speech
-- He can paste the copied text using speech
+- He can select one word from the text using speech.
+- He can select a whole area saying copy start word....to....ending words using speech.
+- He can copy the selected text using speech.
+- He can paste the copied text using speech.
 
 ## User scenario <a name="User">
 ### Who?
@@ -43,44 +43,42 @@ With this concept it would be easier for Eric, but also for a lot of other peopl
 https://user-images.githubusercontent.com/44086608/166654549-1cf3cb62-de08-47cf-b1bd-03b6edd8cc44.mp4
   
 Feedback about Eric:
-  - Eric is 49 years old and lives in Amsterdam-Zuid
+  - Eric is 49 years old and lives in Amsterdam-Zuid.
   - Loves reading, movies, games, music and going to nature.
-  - Eric uses Microsoft Edge, which in my case is perfect (my software is supported there)
+  - Eric uses Microsoft Edge, which in my case is perfect (my software is supported there).
   - Eric has full control over his muscles, they only got deformed because some muscles were stronger than the other. 
   - Selecting using the mouse and mousepad went well, but his friend cannot so we need to make it possible without using the mouse. 
   
 
 Feedback about product:
   - Buttons to start recording is a bit unuser friendly. It needs a lot of actions and can be a bit frustrating. Maybe start listening at the start and have an option to turn of the recording. 
- - Searching words in the text could be a nice option
+ - Searching words in the text could be a nice option.
   - Copy from...to...end is great. You don't have to select a long text yourself. 
   - A chrome extension is very handy. 
   - A way to change text when copying would be a great feature as well. 
 
 ### Week 2 <a name="2">
+  
+Improvements from week 1:
+  - I replaced the copy/paste buttons with a record check button option. 
+  - The recording starts when you open the site and using the check button, can be disabled again.
+  - I made an option to select one word from the text (not perfect yet)
    
 https://user-images.githubusercontent.com/44086608/166654577-69ba5651-bc74-47ab-9673-918c5a8d153c.mp4
 
 Feedback about Eric:
-  
+  - He likes D&D.
+  - He can use both buttons from the mouse.
 
 Feedback about product:
+  - Make it clear that when you open the site, you are being recorded. 
+  - Make it clear what you are saying and if it goes correctly (add pop-ups..?)
+  - If something goes wrong with the command, add a pop-up saying it went wrong. 
+  - The instruction were pretty unclear, maybe let it popout using brighter colors. 
+  - the microphone color when it was on was pretty unclear, change it to green. 
+  - Something Lisanne had, was adding a next or previous when there are multiple words in the text. (add it when I have time left)
 
-  
-kan links en rechts indrukken op de muis, ookal heeft die geen vingers. Gaat vrij soepel. 
-Vriendin waar de casus voor is kan maar 1 knop drukken. Ze is sepastisch en kan met weinig precisie klikken. Dus elke keer heen en weer met de muis is onhandig. Kost veel tijd en frustraties. Liefst zo min mogelijk knoppen gebruik. Veel gebeurt via spraak. 
-Scrollen is best moeilijk. Misschien via spraakopname naar het woord gaan. Vermijd scrollen. Soort zoekfunctie. 
-Dungeons and dragons vind die leuk
-Volgende en vorige invoegen..?
-
-feedback testing:
-maak aan van microfoon duidelijk plus instructies duidelijker via een knop of iets dergelijks.
-Laat zien dat de microfoon aanstat en dat er geluisterd wordt (misschien ook microfoon uitstaan uit).
-Werkte niet op mac...?
-Geef feedback met wat je kopieert en wat er fout gaat!
-Als je kopieert/selecteert dat je kan zien wat je hebt. 
-Denk door de background weinig focus op dingen, toch maar weer terug naar simpel?
-
+The feedback that I think is most important, is making clear to the user what is happening with the commands. Make it clear what he is saying and if something went wrong. 
 
 ### Week 3 <a name="3">
   
