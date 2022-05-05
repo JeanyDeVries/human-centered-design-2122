@@ -5,9 +5,14 @@
 - [Issues](#Issues)
 
 ## Description
-
+For this course we have to make a site for one specific person, in my case Eric. Eric is someone who is in a wheelchair and is limited to his arm movement. For him we have to make a site that copies, paste and selects text on the site using speech. This way he doesn't have to use his fingers for specific movements to select the text he wants to copy and paste. 
 
 ## Concept
+My concept is making a site where he can select, copy and paste using speech. His talking is being listened to, so that he can use it for commands. I want multiple options for him:
+- He can select one word from the text using speech
+- He can select a whole area saying copy start word....to....ending words using speech
+- He can copy the selected text using speech
+- He can paste the copied text using speech
 
 ## User scenario <a name="User">
 ### Who?
