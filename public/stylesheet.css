@@ -9,13 +9,19 @@
 }
 
 body {
-    background-image: url("/img/dndBackground.jpg");
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
     margin-left: 150px;
     margin-right: 150px;
 }
+
+.bg{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+      
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+z-index: -1;}
 
 header {
     width: fit-content;
