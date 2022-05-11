@@ -60,6 +60,7 @@ recognition.addEventListener('result', (message) => {
 })
 
 function copyText(){
+    popup(selectedText)
     navigator.clipboard
           .writeText(selectedText)
           .then(
@@ -69,6 +70,7 @@ function copyText(){
 }
 
 function pasteText(){
+    popup("Geplakt!")
     navigator.clipboard
         .readText()
         .then(cliptext => {
@@ -83,7 +85,9 @@ function selectText(result, string){
     string = result.substring(result.indexOf(string) + string.length + 1)
     $("section").focus()
     if(window.find(string)){
-        console.log("found")
+        console.log(string)
+        popup(string + " gekopieerd")
+        selectedText = string;
         navigator.clipboard
             .writeText(string)
     }
@@ -107,4 +111,17 @@ recognition.addEventListener('end', () =>{
 
 function $(element) {
     return document.querySelector(element)
+}
+
+function popup(string) {
+    // Fill the pop-up with the image and string.
+    $("#pop-up div p").innerHTML = string
+
+    // Show the pop-up.
+    $("#pop-up").classList.add("show")
+
+    // Hide the pop-up after 3 seconds.
+    setTimeout(() => {
+        $("#pop-up").classList.remove("show")
+    }, 3000)
 }
