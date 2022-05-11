@@ -17,11 +17,29 @@
         <h1>PLAKKY</h1>
         <span class="subTitle">Kopier en plak met spraakopname</span>
     </header>
-    <div class = "explanation">
-        <p>Selecteer tekst en zeg kopiëren!</p>
-        <p>Zeg kopieer! en zeg het woord die je wilt kopiëren</p>
-        <p>Zeg plakken!</p>
-    </div>
+
+    <div class="dropdown">
+        <input type="checkbox" id="dropdown">
+      
+        <label class="dropdown__face" for="dropdown">
+          <div class="dropdown__text">Uitleg</div>
+      
+          <div class="dropdown__arrow"></div>
+        </label>
+      
+        <ul class="dropdown__items">
+          <li>
+            <p>Selecteer tekst en zeg kopiëren!</p>
+          </li>
+          <li>
+            <p>Zeg kopieer! en zeg het woord die je wilt kopiëren</p>
+          </li>
+          <li>
+            <p>Zeg plakken!</p>
+          </li>
+        </ul>
+      </div>
+      
     <div class="toggleBarMic">
         <input class="checkboxMic" id="microphone" type="checkbox" unchecked />
         <label for="microphone" class="microphone-check">
@@ -50,6 +68,14 @@
             <p></p>
         </div>
     </div>
+
+      <svg>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </svg>
 
 </body>
 
