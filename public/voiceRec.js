@@ -74,8 +74,8 @@ function pasteText(){
     navigator.clipboard
         .readText()
         .then(cliptext => {
-                console.log(cliptext, document.activeElement.innerText);
-                document.activeElement.textContent += cliptext
+                document.activeElement.value += cliptext
+                console.log("TEXT" + document.activeElement.textContent) 
             },
             err => console.log(err)
     );
@@ -92,7 +92,7 @@ function selectText(result, string){
             .writeText(string)
     }
     else{
-        console.log("not found")
+        console.log("Niet gevonden")
     }
 }
 
