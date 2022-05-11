@@ -51,7 +51,8 @@ recognition.addEventListener('result', (message) => {
     else if(text === 'plakken' && lastMessage !== 'plakken'){
         pasteText();
     }
-    else if(text.includes("kopieer") && message.results[0].isFinal){
+    else if(text.includes("kopieer") && message.results[0].isFinal == true)
+    {
         selectText(text, "kopieer")
     }
 
