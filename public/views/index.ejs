@@ -2,106 +2,104 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheet.css">
-    <script src="/voiceRec.js" defer></script>
-    <script src="/dice.js" defer></script>
-    <title>Voice copy paste</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheet.css">
+  <script type="module" src="/voiceRec.js" defer></script>
+  <script type="module" src="/dice.js" defer></script>
+  <title>Voice copy paste</title>
 </head>
 
 <body>
-    <img src="/img/dndBackground.jpg" class="bg" alt="">
+  <img src="/img/dndBackground.jpg" class="bg" alt="">
 
-    <header>
-        <h1>PLAKKY</h1>
-        <span class="subTitle">Kopier en plak met spraakopname</span>
-    </header>
+  <header>
+    <h1>PLAKKY</h1>
+    <span class="subTitle">Kopier en plak met spraakopname</span>
+  </header>
 
-    <div class="content">
-      <div class="die">
-        <figure class="face face-1"></figure>
-        <figure class="face face-2"></figure>
-        <figure class="face face-3"></figure>
-        <figure class="face face-4"></figure>
-        <figure class="face face-5"></figure>
-        <figure class="face face-6"></figure>
-        <figure class="face face-7"></figure>
-        <figure class="face face-8"></figure>
-        <figure class="face face-9"></figure>
-        <figure class="face face-10"></figure>
-        <figure class="face face-11"></figure>
-        <figure class="face face-12"></figure>
-        <figure class="face face-13"></figure>
-        <figure class="face face-14"></figure>
-        <figure class="face face-15"></figure>
-        <figure class="face face-16"></figure>
-        <figure class="face face-17"></figure>
-        <figure class="face face-18"></figure>
-        <figure class="face face-19"></figure>
-        <figure class="face face-20"></figure>
-      </div>
+  <div class="content">
+    <div class="die">
+      <figure class="face face-1"></figure>
+      <figure class="face face-2"></figure>
+      <figure class="face face-3"></figure>
+      <figure class="face face-4"></figure>
+      <figure class="face face-5"></figure>
+      <figure class="face face-6"></figure>
+      <figure class="face face-7"></figure>
+      <figure class="face face-8"></figure>
+      <figure class="face face-9"></figure>
+      <figure class="face face-10"></figure>
+      <figure class="face face-11"></figure>
+      <figure class="face face-12"></figure>
+      <figure class="face face-13"></figure>
+      <figure class="face face-14"></figure>
+      <figure class="face face-15"></figure>
+      <figure class="face face-16"></figure>
+      <figure class="face face-17"></figure>
+      <figure class="face face-18"></figure>
+      <figure class="face face-19"></figure>
+      <figure class="face face-20"></figure>
     </div>
+  </div>
 
-    <div class="dropdown">
-        <input type="checkbox" id="dropdown">
-      
-        <label class="dropdown__face" for="dropdown">
-          <div class="dropdown__text">Uitleg</div>
-      
-          <div class="dropdown__arrow"></div>
-        </label>
-      
-        <ul class="dropdown__items">
-          <li>
-            <p>Selecteer tekst en zeg kopiëren!</p>
-          </li>
-          <li>
-            <p>Zeg kopieer! en zeg het woord die je wilt kopiëren</p>
-          </li>
-          <li>
-            <p>Zeg plakken!</p>
-          </li>
-        </ul>
-      </div>
-      
-    <div class="toggleBarMic">
-        <input class="checkboxMic" id="microphone" type="checkbox" unchecked />
-        <label for="microphone" class="microphone-check">
-            <span class="microphone-icon"></span>
-        </label>
+  <div class="dropdown">
+    <input type="checkbox" id="dropdown">
+
+    <label class="dropdown__face" for="dropdown">
+      <div class="dropdown__text">Uitleg</div>
+
+      <div class="dropdown__arrow"></div>
+    </label>
+
+    <ul class="dropdown__items">
+      <li>
+        <p>Selecteer tekst en zeg kopiëren!</p>
+      </li>
+      <li>
+        <p>Zeg kopieer! en zeg het woord die je wilt kopiëren</p>
+      </li>
+      <li>
+        <p>Zeg plakken!</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="toggleBarMic">
+    <input class="checkboxMic" id="microphone" type="checkbox" unchecked />
+    <label for="microphone" class="microphone-check">
+      <span class="microphone-icon"></span>
+    </label>
+  </div>
+
+  <section>
+    <p id="textPage">Mijn naam is Aimil Sileas. Ik ben een high elf van de bloedlijn Gilios. Het is niet zo dat het gebruikelijk is in mijn familie om kinderen dubbele namen te geven, eigenlijk ben ik de enige. Mijn beide broers hebben
+      één naam, evenals mijn vader en zijn zus en evenals hun ouders en ooms. Ik ben de enige omdat over mijn
+      bestaan al voor mijn geboorte discussie was. Mijn moeder wist dat ze een vrouw, een tovenares, in zich droeg
+      en was zo dom dit met mijn vader te delen. De laatste tovenares in onze familie is op brute wijze vermoord
+      en sindsdien denkt mijn vader dat alle elven, in het bijzonder strijdlustige vrouwen, buiten de grenzen van
+      de stad groot gevaar lopen. Een vrouw die vertrekt uit de stad is wat hem betreft overleden. Hij zal je
+      bestaan ontkennen, ook al sta je voor zijn neus. Misschien is dat wel één van de belangrijkste redenen voor
+      mijn vertrek geweest.
+    </p>
+
+    <textarea></textarea>
+  </section>
+
+  <div id="pop-up">
+    <div>
+      <p></p>
     </div>
+  </div>
 
-    <section>
-        <p>
-            Mijn naam is Aimil Sileas. Ik ben een high elf van de bloedlijn Gilios. Het is niet zo dat het gebruikelijk
-            is in mijn familie om kinderen dubbele namen te geven, eigenlijk ben ik de enige. Mijn beide broers hebben
-            één naam, evenals mijn vader en zijn zus en evenals hun ouders en ooms. Ik ben de enige omdat over mijn
-            bestaan al voor mijn geboorte discussie was. Mijn moeder wist dat ze een vrouw, een tovenares, in zich droeg
-            en was zo dom dit met mijn vader te delen. De laatste tovenares in onze familie is op brute wijze vermoord
-            en sindsdien denkt mijn vader dat alle elven, in het bijzonder strijdlustige vrouwen, buiten de grenzen van
-            de stad groot gevaar lopen. Een vrouw die vertrekt uit de stad is wat hem betreft overleden. Hij zal je
-            bestaan ontkennen, ook al sta je voor zijn neus. Misschien is dat wel één van de belangrijkste redenen voor
-            mijn vertrek geweest.
-        </p>
-
-        <textarea></textarea>
-    </section>
-
-    <div id="pop-up">
-        <div>
-            <p></p>
-        </div>
-    </div>
-
-      <svg>
-        <filter id="goo">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-          <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-          <feBlend in="SourceGraphic" in2="goo" />
-        </filter>
-      </svg>
+  <svg>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+      <feBlend in="SourceGraphic" in2="goo" />
+    </filter>
+  </svg>
 
 </body>
 

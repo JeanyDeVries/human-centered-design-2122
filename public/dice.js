@@ -1,3 +1,5 @@
+import { copyDiceWord } from "./voiceRec.js";
+
 var $die = document.querySelector('.die'),
     sides = 20,
     initialSide = 1,
@@ -14,9 +16,8 @@ function randomFace() {
 
 function rollTo(face) {
   clearTimeout(timeoutId)
-  
-//   document.querySelector('[href=' + face + ']').classList.add('active')
-  
+  copyDiceWord(face);
+    
   $die.setAttribute('data-face', face)
 }
 
@@ -26,7 +27,6 @@ function reset() {
 }
 
 document.querySelector('.die').addEventListener("click", function () {
-    console.log("click")
   $die.classList.add('rolling')
   clearTimeout(timeoutId)
   

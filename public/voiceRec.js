@@ -5,11 +5,13 @@ recognition.lang = 'nl';
 recognition.interimResults = true;
 
 const recordingbutton = document.getElementById('microphone');
+const textPage = document.getElementById('textPage');
 
 var doNotListen = false;
 
 var selectedText = "";
 var lastMessage = "";
+
 
 checkifSupported();
 
@@ -130,3 +132,13 @@ function popup(string) {
         $("#pop-up").classList.remove("show")
     }, 3000)
 }
+
+export function copyDiceWord(face){
+    const string = textPage.innerHTML;
+    var words = string.split(' ');
+
+    selectedText = words[--face];
+    popup(selectedText + " gekopieerd")
+    navigator.clipboard
+        .writeText(selectedText)
+    }
