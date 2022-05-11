@@ -14,8 +14,10 @@ var lastMessage = "";
 checkifSupported();
 
 function checkifSupported(){
-    if(recognition)
+    if(recognition){
+        popup("Er wordt geluisterd!")
         startListening();
+    }
     else{
         return;
     }
@@ -49,7 +51,7 @@ recognition.addEventListener('result', (message) => {
     else if(text === 'plakken' && lastMessage !== 'plakken'){
         pasteText();
     }
-    else if(text.includes("kopieer")){
+    else if(text.includes("kopieer") && message.results[0].isFinal){
         selectText(text, "kopieer")
     }
 
@@ -97,10 +99,12 @@ function selectText(result, string){
 }
 
 function startListening(){
+    popup("Er wordt geluisterd!")
     recognition.start();
 }
 
 function stopListening(){
+    popup("Er wordt niet geluisterd!")
     recognition.stop();
 }
 
