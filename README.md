@@ -52,6 +52,7 @@ With this concept it would be easier for Eric, but also for a lot of other peopl
   After my first test I noticed that Eric is someone who likes to have as little as much of actions needed. I first had 2 buttons to copy and paste, but he actually     wanted to be instantly recorded and just speak the commands without having to select buttons. So at the end I made a checkbox which records at first + gives a         notification that you are being recorded. You also have the option to uncheck it to stop being recorded. But with this way you can easily use the speech commands       without using a lot of actions using mouse and keyboard.
   
   ### Ignore conventions <a name="coventions">
+  Normally you copy and paste using your keyboard. But it can be hard for people with a disability. That is why I made it work with speech recognition.A convention I     ignored specifically for Eric is making the buttons and text bigger so that it is easer to click and select. It may look a bit odd or ugly but for usability it is     handy.
 
   ### Add nonsense <a name="nonsense">
   
