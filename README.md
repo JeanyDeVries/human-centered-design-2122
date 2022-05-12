@@ -55,6 +55,7 @@ With this concept it would be easier for Eric, but also for a lot of other peopl
   Normally you copy and paste using your keyboard. But it can be hard for people with a disability. That is why I made it work with speech recognition.A convention I     ignored specifically for Eric is making the buttons and text bigger so that it is easer to click and select. It may look a bit odd or ugly but for usability it is     handy.
 
   ### Add nonsense <a name="nonsense">
+  After week 1 I found out that Eric likes Dungeons and Dragons. So after that I wanted to implement the feeling of fantasy on my site. So I gave my site a fantasy-sih   background and added a matching font to it. Dungeons and Dragons are hard to play without dices, so I added a d20 to the site. I gave it a fun animation that rolls     the dice to a specific face. When it is done rolling it selects a specific word. For example if it lands on the 5 it will get the fifth word from the text. 
   
 
 ## User testing <a name="Testing">
