@@ -141,7 +141,8 @@ export function copyDiceWord(face){
 
     selectedText = words[--face]; 
 
-    navigator.clipboard.writeText(selectedText)    
+    navigator.clipboard
+        .writeText(selectedText)    
 
     popup(selectedText + " gekopieerd") 
 }
