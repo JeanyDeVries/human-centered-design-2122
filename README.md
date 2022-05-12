@@ -111,7 +111,10 @@ Improvements from week 2:
   - Added a explanation button that dropdowns the explanation, hopefully this will make it more clearer to Eric to read the explanations beforehand
   - The "kopieer (woord)" command now works better, because it waits until you are finished saying the word and then copies it. 
   
-  
+
+https://user-images.githubusercontent.com/44086608/168158485-62cf3cce-d333-4871-8ba1-d16135530cee.mp4
+
+
 Feedback about product:
   - More select options would be nice for the future. For longer text Eric still has to select with the mouse, which is hard to do. 
   - Styling is fun! He was happy with the d20.
