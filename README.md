@@ -46,6 +46,7 @@ With this concept it would be easier for Eric, but also for a lot of other peopl
 ## Exclusive design <a name="ExclusiveDesign">
   
   ### Study situation <a name="study">
+  Eric is since childhood physically limited on what he can do. At first I thought he could't do anything with mouse or keyboard. But suprisingly he used it very well,   only having to use multiple keys at once is a big struggle for him. So my solution was to replace this by using speech. Eric can select text with his mouse pretty     precise (with some difficulty) but he said that a friend of him couldn't. He wanted to make this also accesible for users who aren't as great with a mouse or           keyboard. That's is why I added a select command using speech as well. I also wanted to add a from...to... command, but because of lack of time I couldn't. It is       also pretty frustrating to select copy and paste constantly by right clicking your mouse and selecting copy/paste. With using speech this becomes a lot faster.
   
   ### Prioritise identity <a name="identity">
   
