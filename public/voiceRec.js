@@ -55,7 +55,10 @@ recognition.addEventListener('result', (message) => {
     }
     else if(text.includes("kopieer") && message.results[0].isFinal == true)
     {
-        selectText(text, "kopieer")
+        selectText(text, "kopieer", message)
+    }
+    else if(message.results[0].isFinal == true && lastMessage !== 'plakken'){
+        popup("Er ging iets fout, probeer opnieuw")
     }
 
     //event is final
@@ -68,10 +71,6 @@ function copyText(){
     popup(selectedText)
     navigator.clipboard
           .writeText(selectedText)
-          .then(
-              success => console.log("text copied"), 
-              err => console.log("error copying text")
-          );
 }
 
 function pasteText(){
@@ -86,7 +85,7 @@ function pasteText(){
     );
 }
 
-function selectText(result, string){
+function selectText(result, string, message){
     string = result.substring(result.indexOf(string) + string.length + 1)
     $("section").focus()
     if(window.find(string)){
@@ -97,6 +96,9 @@ function selectText(result, string){
             .writeText(string)
     }
     else{
+        if(message.results[0].isFinal == true)
+            popup("Niet gevonden")
+
         console.log("Niet gevonden")
     }
 }
@@ -134,11 +136,12 @@ function popup(string) {
 }
 
 export function copyDiceWord(face){
-    const string = textPage.innerHTML;
+    const string = textPage.innerText;
     var words = string.split(' ');
 
-    selectedText = words[--face];
-    popup(selectedText + " gekopieerd")
-    navigator.clipboard
-        .writeText(selectedText)
-    }
+    selectedText = words[--face]; 
+
+    navigator.clipboard.writeText(selectedText)    
+
+    popup(selectedText + " gekopieerd") 
+}
