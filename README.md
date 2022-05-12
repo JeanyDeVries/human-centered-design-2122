@@ -111,6 +111,14 @@ Improvements from week 2:
   - Added a explanation button that dropdowns the explanation, hopefully this will make it more clearer to Eric to read the explanations beforehand
   - The "kopieer (woord)" command now works better, because it waits until you are finished saying the word and then copies it. 
   
+  
+Feedback about product:
+  - More select options would be nice for the future. For longer text Eric still has to select with the mouse, which is hard to do. 
+  - Styling is fun! He was happy with the d20.
+  - The pop-ups were making it clear what was happening behind the screen. Eric knew what was happening and when he needed to try it again.
+  - The pop-ups showing if it was recording or not was also clear. 
+  - The "uitleg" button was clear for him that it was there. He tried the commands without the explanation, but sadly he used other words, maybe need to change them in     the future. 
+  
 ## Future plans <a name="future">
 I wanted to add more to this app, but because of lack of time I couldn't. Things I wanted to add were which Eric wants are:
   - More select options with speech (from...to...)
