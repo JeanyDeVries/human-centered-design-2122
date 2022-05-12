@@ -98,6 +98,13 @@ Feedback about product:
 The feedback that I think is most important, is making clear to the user what is happening with the commands. Make it clear what he is saying and if something went wrong. 
 
 ### Week 3 <a name="3">
+Improvements from week 2:
+  - I made pop-up notifications which make clear what is happening behind the screens. 
+  - I also made pop-up notifications to show if the computer is listening or not.
+  - I redesigned the page a bit to make it more readable.
+  - I added a d20 dice (D&D) which spins and selects a word in the text according to the number on the face of the dice. 
+  - Added a explanation button that dropdowns the explanation, hopefully this will make it more clearer to Eric to read the explanations beforehand
+  - The "kopieer (woord)" command now works better, because it waits until you are finished saying the word and then copies it. 
   
   
   
