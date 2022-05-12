@@ -2,6 +2,12 @@
 - [Description](#description)
 - [Concept](#concept)
 - [User scenario](#User)
+- [Exclusive design](#ExclusiveDesign)
+  - [Study situation](#study)
+  - [Prioritise identity](#identity)
+  - [Ignore conventions](#coventions)
+  - [Add nonsense](#nonsense)
+
 - [User testing](#Testing)
   - [Week 1](#1)
   - [Week 2](#2)
@@ -35,6 +41,17 @@ As I said in my concept chapter, I want the user to have multiple commands. One 
 
 ### Why?
 With this concept it would be easier for Eric, but also for a lot of other people, to select/copy/paste without having to use key combinations and precize movement with the mouse. 
+  
+## Exclusive design <a name="ExclusiveDesign">
+  
+  ### Study situation <a name="study">
+  
+  ### Prioritise identity <a name="identity">
+  
+  ### Ignore conventions <a name="coventions">
+
+  ### Add nonsense <a name="nonsense">
+  
 
 ## User testing <a name="Testing">
   
