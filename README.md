@@ -12,6 +12,7 @@
   - [Week 1](#1)
   - [Week 2](#2)
   - [Week 3](#3)
+- [Future plans](#future)
 - [Issues](#Issues)
 
 ## Description
@@ -106,10 +107,12 @@ Improvements from week 2:
   - Added a explanation button that dropdowns the explanation, hopefully this will make it more clearer to Eric to read the explanations beforehand
   - The "kopieer (woord)" command now works better, because it waits until you are finished saying the word and then copies it. 
   
-  
-  
-  
-  
+## Future plans <a name="future">
+I wanted to add more to this app, but because of lack of time I couldn't. Things I wanted to add were which Eric wants are:
+  - More select options with speech (from...to...)
+  - When there are multiple of the same word, I want Eric to have the option to get to the next one in the text instead of just getting the first one.
+  - Eric also wanted to change the text which he selected, so that would be a nice feature as well.
+  - I want to highlight the selection of the dice, instead of just showing the selected word in a pop-up
   
 ## Issues <a name="Issues">
 If you see any issues in my code or spots that need improvements let me know. You can file an issue in this repository. Thank you!
