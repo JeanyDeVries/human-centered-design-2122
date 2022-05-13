@@ -20,8 +20,7 @@ For this course we have to make a site for one specific person, in my case Eric.
 
 ## Concept
 My concept is making a site where he can select, copy and paste using speech. His talking is being listened to, so that he can use it for commands. I want multiple options for him:
-- He can select one word from the text using speech.
-- He can select a whole area saying copy start word....to....ending words using speech.
+- He can select one word or multiple words from the text using speech.
 - He can copy the selected text using speech.
 - He can paste the copied text using speech.
 
